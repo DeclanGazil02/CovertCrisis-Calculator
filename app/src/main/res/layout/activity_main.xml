@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardCodedText"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/almost_back">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/workingsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Hello World!"
+            android:textSize="25sp"
+            android:lines="2"
+            android:maxLines="2"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@id/resultsTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Hello World!"
+            android:textSize="40sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button style="@style/buttonNumber"
+            android:text="AC"
+            android:textColor="@color/red"
+            android:onClick="allClearAction"
+            />
+        <Button style="@style/buttonNumber"
+            android:text="⌫"
+            android:textColor="@color/red"
+            android:onClick="backSpaceAction"
+            />
+        <Button style="@style/buttonNumber"
+            android:text=""/>
+        <Button style="@style/buttonOperator"
+            android:text="/"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button style="@style/buttonNumber"
+            android:text="1"/>
+        <Button style="@style/buttonNumber"
+            android:text="2"/>
+        <Button style="@style/buttonNumber"
+            android:text="3"/>
+        <Button style="@style/buttonOperator"
+            android:text="x"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button style="@style/buttonNumber"
+            android:text="4"/>
+        <Button style="@style/buttonNumber"
+            android:text="5"/>
+        <Button style="@style/buttonNumber"
+            android:text="6"/>
+        <Button style="@style/buttonOperator"
+            android:text="-"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button style="@style/buttonNumber"
+            android:text="7"/>
+        <Button style="@style/buttonNumber"
+            android:text="8"/>
+        <Button style="@style/buttonNumber"
+            android:text="9"/>
+        <Button style="@style/buttonOperator"
+            android:text="+"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/buttonRow">
+        <Button style="@style/buttonNumber"
+            android:text="."/>
+        <Button style="@style/buttonNumber"
+            android:text="0"/>
+        <Button style="@style/buttonNumber"
+            android:text="="
+            android:layout_weight="2"
+            android:background="@color/orange"
+            android:textSize="40sp"
+            android:onClick="equalsAction"
+            />
+    </LinearLayout>
+
+</LinearLayout>
