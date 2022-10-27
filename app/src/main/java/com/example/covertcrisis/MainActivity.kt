@@ -36,18 +36,18 @@ class MainActivity : AppCompatActivity() {
                 canAddDecimal = false //now set to false
             }
             else {
-                binding.workingsTextView.append(view.text)
+                binding.workingsTextView.append(view.text) //append inputed button number
                 canAddOperation = true
             }
         }
     }
     fun allClearAction(view: View) {
-        binding.workingsTextView.text = ""
-        binding.resultsTextView.text = ""
+        binding.workingsTextView.text = "" //empties working section
+        binding.resultsTextView.text = "" //empties results section
     }
-    fun backSpaceAction(view: View) {
+    fun backSpaceAction(view: View) { //backspace function
         val length = binding.workingsTextView.text.length
-        if(length > 0)
+        if(length > 0) //checks if text exists
             binding.workingsTextView.text = binding.workingsTextView.text.substring(0, length - 1) //erase last digit
 
     }
@@ -124,22 +124,22 @@ class MainActivity : AppCompatActivity() {
         return newList
     }
 
-    private fun digitsOperators(): MutableList<Any> {
+    private fun digitsOperators(): MutableList<Any> { //breaks workings text view into array of floats and characters
         val list = mutableListOf<Any>()
         var currentDigit = ""
 
         for(character in binding.workingsTextView.text){
-            if(character.isDigit() || character == '.'){
-                currentDigit += character
+            if(character.isDigit() || character == '.'){ //checks if digit or decimal
+                currentDigit += character //appends that digit to current number
             }
             else{
-                list.add(currentDigit.toFloat())
+                list.add(currentDigit.toFloat()) //add number to the list
                 currentDigit = ""
-                list.add(character)
+                list.add(character) //adds character to list
             }
         }
 
-        if(currentDigit != "")
+        if(currentDigit != "") //to catch last number
             list.add(currentDigit.toFloat())
 
         return list
