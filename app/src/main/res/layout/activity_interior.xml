@@ -44,31 +44,50 @@
 
 
     <LinearLayout
-        style="@style/buttonRow">
-        <Button style="@style/buttonWords"
+        android:id="@+id/Row1"
+        style="@style/buttonRow"
+        app:layout_constraintBottom_toTopOf="@id/Row2"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <Button
+            style="@style/buttonWords"
+            android:onClick="allClearAction"
             android:text="Messaging"
             android:textColor="@color/white"
-            android:onClick="allClearAction"
-            />
-        <Button style="@style/buttonWords"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <Button
+            style="@style/buttonWords"
+            android:onClick="backSpaceAction"
             android:text="Counseling"
             android:textColor="@color/white"
-            android:onClick="backSpaceAction"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
     </LinearLayout>
 
     <LinearLayout
-        style="@style/buttonRow">
-        <Button style="@style/buttonWords"
-            android:text="Resources"
-            android:textColor="@color/white"
+        android:id="@+id/Row2"
+        style="@style/buttonRow"
+        app:layout_constraintBottom_tobottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Row1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="169dp">
+
+        <Button
+            style="@style/buttonWords"
             android:onClick="allClearAction"
-            />
-        <Button style="@style/buttonWords"
-            android:text="Hold For Help"
-            android:textColor="@color/white"
+            android:text="Resources"
+            android:textColor="@color/white" />
+
+        <Button
+            style="@style/buttonWords"
             android:onClick="backSpaceAction"
-            />
+            android:text="Hold For Help"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 
