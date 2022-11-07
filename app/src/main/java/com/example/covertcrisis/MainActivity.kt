@@ -1,5 +1,6 @@
 package com.example.covertcrisis
 
+import android.content.Intent
 import android.os.Build.VERSION_CODES.P
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val sharedPref = getSharedPreferences("myPref", MODE_PRIVATE)
+        binding.equalsButton.setOnClickListener{
+            if(sharedPref.getString("passcode", "") == binding.workingsTextView.text.toString()) {
+                val intent = Intent(this, SignUpActivity::class.java)
+                startActivity(intent)
+            }else{
+                binding.resultsTextView.text = calculateResult()
+            }
+        }
     }
 
    fun operationAction(view: View) {
@@ -55,9 +65,6 @@ class MainActivity : AppCompatActivity() {
                 canAddOperation = false
         }
 
-    }
-    fun equalsAction(view: View) {
-        binding.resultsTextView.text = calculateResult()
     }
 
     private fun calculateResult(): String {
