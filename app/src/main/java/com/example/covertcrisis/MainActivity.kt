@@ -42,13 +42,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun allClearAction(view: View) {
-        binding.workingsTextView.text = "" //empties working section
-        binding.resultsTextView.text = "" //empties results section
+        binding.workingsTextView.text = ""
+        binding.resultsTextView.text = ""
+        canAddOperation = false
     }
     fun backSpaceAction(view: View) { //backspace function
         val length = binding.workingsTextView.text.length
-        if(length > 0) //checks if text exists
-            binding.workingsTextView.text = binding.workingsTextView.text.substring(0, length - 1) //erase last digit
+        if(length > 0) {
+            binding.workingsTextView.text =
+                binding.workingsTextView.text.substring(0, length - 1) //erase last digit
+            if(length == 1)
+                canAddOperation = false
+        }
 
     }
     fun equalsAction(view: View) {

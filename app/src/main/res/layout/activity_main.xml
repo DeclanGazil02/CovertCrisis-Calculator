@@ -16,7 +16,6 @@
         android:layout_weight="2"
         android:padding="20dp">
 
-
         <TextView
             android:id="@+id/workingsTextView"
             android:layout_width="match_parent"
@@ -52,17 +51,15 @@
             android:text="AC"
             android:textColor="@color/red"
             android:onClick="allClearAction"
-            />
+            android:background="@color/almost_back" />
         <Button style="@style/buttonNumber"
             android:text="⌫"
             android:textColor="@color/red"
-            android:onClick="backSpaceAction"
-            />
+            android:onClick="backSpaceAction"/>
         <Button style="@style/buttonNumber"
             android:text=""/>
         <Button style="@style/buttonOperator"
-            android:text="/"
-            />
+            android:text="/"/>
     </LinearLayout>
 
     <LinearLayout
@@ -74,8 +71,7 @@
         <Button style="@style/buttonNumber"
             android:text="3"/>
         <Button style="@style/buttonOperator"
-            android:text="x"
-            />
+            android:text="x"/>
     </LinearLayout>
 
     <LinearLayout
@@ -87,8 +83,7 @@
         <Button style="@style/buttonNumber"
             android:text="6"/>
         <Button style="@style/buttonOperator"
-            android:text="-"
-            />
+            android:text="-"/>
     </LinearLayout>
 
     <LinearLayout
@@ -100,8 +95,7 @@
         <Button style="@style/buttonNumber"
             android:text="9"/>
         <Button style="@style/buttonOperator"
-            android:text="+"
-            />
+            android:text="+"/>
     </LinearLayout>
 
     <LinearLayout
@@ -115,8 +109,7 @@
             android:layout_weight="2"
             android:background="@color/orange"
             android:textSize="40sp"
-            android:onClick="equalsAction"
-            />
+            android:onClick="equalsAction"/>
     </LinearLayout>
 
 </LinearLayout>
