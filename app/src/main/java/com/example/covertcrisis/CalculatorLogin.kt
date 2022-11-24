@@ -23,7 +23,7 @@ class CalculatorLogin : AppCompatActivity() {
         val editor = sharedPref.edit()
 
 
-        if(sharedPref.getBoolean("Initialized1", false)){//if already set password
+        if(sharedPref.getBoolean("Initialized3", false)){//if already set password
             val intent = Intent(this@CalculatorLogin, MainActivity::class.java)
             startActivity(intent)
         }
@@ -35,7 +35,7 @@ class CalculatorLogin : AppCompatActivity() {
                     val passcode = binding.workingsTextView.text.toString()
                     editor.apply {
                         putString("passcode", passcode)
-                        putBoolean("Initialized1", true)
+                        putBoolean("Initialized3", true)
                         apply()
                         //now go to real calculator
                         val intent = Intent(this@CalculatorLogin, MainActivity::class.java)
