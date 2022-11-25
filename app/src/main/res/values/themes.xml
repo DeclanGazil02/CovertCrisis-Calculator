@@ -10,13 +10,13 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.Messaging" parent="Theme.MaterialComponents">
+    <style name="Theme.Messaging" parent="ThemeOverlay.MaterialComponents.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/orange</item>
-        <item name="colorPrimaryVariant">@color/almost_back</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/almost_back</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/purple_200</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/yellow</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -29,4 +29,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/yellow</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.CovertCrisis.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.CovertCrisis.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.CovertCrisis.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
