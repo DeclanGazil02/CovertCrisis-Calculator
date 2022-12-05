@@ -30,8 +30,12 @@ class MessagingLogin : AppCompatActivity() {
             startActivity(intent)
             true
         }
+        bottomNavigationView.menu.getItem(2).setOnMenuItemClickListener{ //home
+            val intent = Intent(this, ResourceShareLocationActivity::class.java)
+            startActivity(intent)
+            true
+        }
 
         bottomNavigationView.menu.getItem(1).setChecked(true)
-        //TODO::SET BOBBYS
     }
 }

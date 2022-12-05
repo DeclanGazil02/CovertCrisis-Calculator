@@ -15,6 +15,20 @@
         android:theme="@style/Theme.CovertCrisis"
         tools:targetApi="31">
         <activity
+            android:name=".ResourceActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ResourceShareLocationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".InteriorActivity"
             android:exported="false">
             <meta-data

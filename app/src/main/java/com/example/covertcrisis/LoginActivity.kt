@@ -33,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
             if (email.isNotEmpty() && pass.isNotEmpty()) {
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        //TODO:: THIS WILL NEED TO CHANGE TO LANDING PAGE OF COVERT CRISIS NOT MAIN
                         Toast.makeText(this, "Signing in!", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, InteriorActivity::class.java)
                         startActivity(intent)

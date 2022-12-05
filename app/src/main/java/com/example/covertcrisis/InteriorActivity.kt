@@ -26,6 +26,10 @@ class InteriorActivity : AppCompatActivity() {
             startActivity(intent)
             true
         }
-        //TODO::SET BOBBYS
+        bottomNavigationView.menu.getItem(2).setOnMenuItemClickListener{ //home
+            val intent = Intent(this, ResourceShareLocationActivity::class.java)
+            startActivity(intent)
+            true
+        }
     }
 }
