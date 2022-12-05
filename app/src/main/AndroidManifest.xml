@@ -15,6 +15,40 @@
         android:theme="@style/Theme.CovertCrisis"
         tools:targetApi="31">
         <activity
+            android:name=".resources"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".resourceMenu"
+            android:exported="false"
+            android:label="@string/title_activity_resource_menu"
+            android:theme="@style/Theme.CovertCrisis.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ResourceMenu"
+            android:exported="false"
+            android:label="@string/title_activity_resource_menu"
+            android:theme="@style/Theme.CovertCrisis.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ResourceShareLocActivity"
+            android:exported="false"
+            android:label="@string/title_activity_resource"
+            android:theme="@style/Theme.CovertCrisis.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SixthMessagingActivity"
             android:exported="false">
             <meta-data

@@ -14,9 +14,9 @@
         />
 
     <item
-        android:title="Resources"
-        android:icon = "@drawable/ic_baseline_dashboard_24"
-        />
+        android:id="@+id/frag63"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="Resources" />
 
 
 
